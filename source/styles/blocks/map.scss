@@ -1,0 +1,29 @@
+// .map {
+// }
+
+.map__contact {
+  background-color: $base-grey;
+
+  &.map__contact--index {
+    background-color: $base-white;
+  }
+}
+
+.map__invite {
+  font-family: $special-font;
+  color: $base-dark-grey;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.map__address {
+  font-style: normal;
+  line-height: 20px;
+}
+
+// .map__address-city {
+// }
+
+// .map__address-street {
+// }

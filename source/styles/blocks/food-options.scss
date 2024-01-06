@@ -1,0 +1,36 @@
+// .food-options {
+// }
+
+.food-options__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.food-options__item {
+  background-color: $base-grey;
+}
+
+.food-options__title {
+  font-family: $special-font;
+  color: $base-black;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  font-weight: 400;
+  // &.food-options__title--slim {
+  // }
+  // &.food-options__title--pro {
+  // }
+}
+
+// .food-options__description {
+// }
+
+.food-options__link {
+  font-family: $special-font;
+  color: $base-black;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}

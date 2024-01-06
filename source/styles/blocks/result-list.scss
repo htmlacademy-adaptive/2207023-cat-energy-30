@@ -1,0 +1,28 @@
+// .result-list {
+// }
+.result-list__wrap {
+  &.result-list__wrap--cost {
+    .result-list__parameter,
+    .result-list__value {
+      font-family: $special-font;
+      color: $base-black;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.result-list__parameter {
+  text-transform: lowercase;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.result-list__value {
+  font-family: $special-font;
+  color: $base-black;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}

@@ -1,0 +1,25 @@
+.hero-section {
+  background-color: $base-green;
+}
+
+.hero-section__title {
+  font-family: $special-font;
+  color: $base-white;
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.hero-section__description {
+  font-family: $special-font;
+  color: $base-white;
+  text-align: center;
+  line-height: 14px;
+}
+
+// .hero-section__button {
+// }
+
+// .hero-section__image {
+// }
