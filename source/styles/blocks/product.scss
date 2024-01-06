@@ -1,0 +1,38 @@
+.product {
+  &.product--more {
+    .product__title {
+      text-align: center;
+    }
+  }
+}
+
+.product__link-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .product__image {
+// }
+
+.product__link-text {
+  color: $special-dark-grey;
+}
+
+.product__title {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: $special-font;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product__parameter-list {
+  margin: 0;
+}
+
+.product__description {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}

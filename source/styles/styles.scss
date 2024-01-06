@@ -1,9 +1,9 @@
 /* GLOBAL */
 @import "./global/variables.scss";
 @import "./global/mixins.scss";
-@import "./global/global.scss";
 @import "./global/fonts.scss";
-@import "./global/common.scss";
+@import "./global/global.scss";
+// @import "./global/common.scss";
 @import "./global/visually-hidden.scss";
 
 /* BLOCKS */
@@ -25,7 +25,7 @@
 // FORM BLOCKS
 @import "./blocks/form-programm.scss";
 
-// CATALG BLOCKS
+// CATALOG BLOCKS
 @import "./blocks/catalog.scss";
 @import "./blocks/product.scss";
 @import "./blocks/parameter-list.scss";
@@ -35,4 +35,3 @@
 @import "./blocks/map.scss";
 @import "./blocks/footer-main.scss";
 @import "./blocks/social.scss";
-
