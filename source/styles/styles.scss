@@ -1,7 +1,38 @@
 /* GLOBAL */
 @import "./global/variables.scss";
+@import "./global/mixins.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/common.scss";
+@import "./global/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+// PAGE HEADER + BUTTON
+@import "./blocks/page.scss";
+@import "./blocks/header-main.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/main.scss";
+@import "./blocks/button.scss";
+
+// INDEX BLOCKS
+@import "./blocks/hero-section.scss";
+@import "./blocks/food-options.scss";
+@import "./blocks/how-it-works.scss";
+@import "./blocks/example.scss";
+@import "./blocks/result-list.scss";
+@import "./blocks/comparison-slider.scss";
+
+// FORM BLOCKS
+@import "./blocks/form-programm.scss";
+
+// CATALG BLOCKS
+@import "./blocks/catalog.scss";
+@import "./blocks/product.scss";
+@import "./blocks/parameter-list.scss";
+@import "./blocks/related-products.scss";
+
+// PAGE FOOTER
+@import "./blocks/map.scss";
+@import "./blocks/footer-main.scss";
+@import "./blocks/social.scss";
+
