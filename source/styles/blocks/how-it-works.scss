@@ -1,3 +1,4 @@
+/* stylelint-disable rule-empty-line-before */
 // .how-it-works {
 // }
 
@@ -15,13 +16,42 @@
   list-style: none;
 }
 
-// .how-it-works__item {
-//   &.how-it-works__item--healthy {
-//   }
-//   &.how-it-works__item--easy {
-//   }
-//   &.how-it-works__item--change {
-//   }
-//   &.how-it-works__item--time {
-//   }
-// }
+.how-it-works__item {
+  position: relative;
+  min-height: 60px;
+  padding-left: 80px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $base-green;
+    display: block;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+
+  &.how-it-works__item--healthy::before {
+    background-image: url("../../images/icons/stack.svg#healthy");
+    background-size: 30px 32px;
+  }
+
+  &.how-it-works__item--easy::before {
+    background-image: url("../../images/icons/stack.svg#easy");
+    background-size: 26px 30px;
+  }
+
+  &.how-it-works__item--change::before {
+    background-image: url("../../images/icons/stack.svg#change");
+    background-size: 25px 30px;
+  }
+
+  &.how-it-works__item--time::before {
+    background-image: url("../../images/icons/stack.svg#time");
+    background-size: 28px 32px;
+  }
+}

@@ -5,10 +5,51 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  padding-top: 20px;
 }
 
 .food-options__item {
   background-color: $base-grey;
+  position: relative;
+  padding-top: 30px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $base-green;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.food-options__item--slim::after {
+    background-image: url("../../images/icons/stack.svg#cat-slim");
+    width: 36px;
+    height: 50px;
+    top: 21px;
+    left: 27px;
+  }
+
+  &.food-options__item--pro::after {
+    background-image: url("../../images/icons/stack.svg#cat-pro");
+    width: 67px;
+    height: 28px;
+    top: 35px;
+    left: 12px;
+  }
 }
 
 .food-options__title {
@@ -18,10 +59,8 @@
   line-height: 37px;
   text-transform: uppercase;
   font-weight: 400;
-  // &.food-options__title--slim {
-  // }
-  // &.food-options__title--pro {
-  // }
+  margin-top: 0;
+  margin-left: 90px;
 }
 
 // .food-options__description {
@@ -33,4 +72,16 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+  display: inline-flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    background-image: url("../../images/icons/stack.svg#arrow");
+    width: 32px;
+    height: 12px;
+    margin-left: 15px;
+    background-repeat: no-repeat;
+    background-position: left -10px center;
+  }
 }

@@ -55,4 +55,21 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  padding: 187px 58px 43px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 78px;
+    background-image: url("../../images/icons/stack.svg#gift");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 59px;
+  }
 }
