@@ -12,15 +12,24 @@
   </head>
   <body class="page__body">
     <header class="header-main">
-      <a class="header-main__logo" href="#">
-        <img class="header-main__logo-image" src="#" width="33" height="38" alt="Логотип магазина.">
-        <img class="header-main__logo-text" src="#" width="101" height="18" alt="CAT ENERGY.">
+      <a class="header-main__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1280px)" type="image/svg+xml" srcset="images/logo-image-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-image-tablet.svg" width="60" height="50">
+          <img class="header-main__logo-image" src="images/logo-image-mobile.svg" width="33" height="38" alt="Логотип магазина.">
+        </picture>
+        <img class="header-main__logo-text" src="images/logo-text-header.svg" width="101" height="18" alt="CAT ENERGY.">
       </a>
       <nav class="header-main__navigation navigation">
-        <button class="navigation__toggle-button" type="button">
+        <button class="navigation__toggle-button menu-btn" type="button">
           <span class="visually-hidden">
             Открыть меню.
           </span>
+            <svg class="menu-btn__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path class="menu-btn__line1" stroke="#000" stroke-width="2" d="M0 3h24"></path>
+              <path class="menu-btn__line2" stroke="#000" stroke-width="2" d="M0 11h24"></path>
+              <path class="menu-btn__line3" stroke="#000" stroke-width="2" d="M0 19h24"></path>
+            </svg>
         </button>
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -89,7 +98,7 @@
             <ul class="form-programm__target-list">
               <li class="form-programm__target-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="radio" value="Slim" name="Target" checked>
+                  <input class="visually-hidden form-programm__input form-programm__input--radio" type="radio" value="Slim" name="Target" checked>
                   <span class="form-programm__label-text">
                     Похудение
                   </span>
@@ -97,7 +106,7 @@
               </li>
               <li class="form-programm__target-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="radio" value="Pro" name="Target">
+                  <input class="visually-hidden form-programm__input form-programm__input--radio" type="radio" value="Pro" name="Target">
                   <span class="form-programm__label-text">
                     Набор массы
                   </span>
@@ -105,7 +114,7 @@
               </li>
               <li class="form-programm__target-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="radio" value="IDK" name="Target">
+                  <input class="visually-hidden form-programm__input form-programm__input--radio" type="radio" value="IDK" name="Target">
                   <span class="form-programm__label-text">
                     Не знаю (Нужен ваш совет)
                   </span>
@@ -121,13 +130,13 @@
             </legend>
             <ul class="form-programm__owner-list">
               <li class="form-programm__owner-item">
-                <label class="form-programm__label">
+                <label class="form-programm__label form-programm__label--email">
                   E-mail:*
                   <input class="form-programm__input" type="email" placeholder="Введите E-mail" value="kuklachev@gmail.com" name="Email-cat-owner" required>
                 </label>
               </li>
               <li class="form-programm__owner-item">
-                <label class="form-programm__label">
+                <label class="form-programm__label form-programm__label--phone">
                   Телефон:*
                   <input class="form-programm__input" type="tel" placeholder="Введите номер телефона" value="8 (960) 900-60-90" name="Phone-cat-owner" required>
                 </label>
@@ -153,7 +162,7 @@
             <ul class="form-programm__additionally-list">
               <li class="form-programm__additionally-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="checkbox" value="Sugar-free" name="Additionally" checked>
+                  <input class="visually-hidden form-programm__input form-programm__input--checkbox" type="checkbox" value="Sugar-free" name="Additionally" checked>
                   <span class="form-programm__label-text">
                     Cахарозаменитель
                   </span>
@@ -161,7 +170,7 @@
               </li>
               <li class="form-programm__additionally-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="checkbox" value="Water" name="Additionally">
+                  <input class="visually-hidden form-programm__input form-programm__input--checkbox" type="checkbox" value="Water" name="Additionally">
                   <span class="form-programm__label-text">
                     Питьевая вода
                   </span>
@@ -169,7 +178,7 @@
               </li>
               <li class="form-programm__additionally-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="checkbox" value="Milk" name="Additionally">
+                  <input class="visually-hidden form-programm__input form-programm__input--checkbox" type="checkbox" value="Milk" name="Additionally">
                   <span class="form-programm__label-text">
                     Молоко
                   </span>
@@ -177,7 +186,7 @@
               </li>
               <li class="form-programm__additionally-item">
                 <label class="form-programm__label">
-                  <input class="visually-hidden" type="checkbox" value="Vitamin" name="Additionally">
+                  <input class="visually-hidden form-programm__input form-programm__input--checkbox" type="checkbox" value="Vitamin" name="Additionally">
                   <span class="form-programm__label-text">
                     Витамины
                   </span>
@@ -216,7 +225,7 @@
     </main>
     <footer class="footer-main">
       <a class="footer-main__logo" href="#">
-        <img class="footer-main__logo-text" src="#" width="128" height="24" alt="CAT ENERGY.">
+        <img class="footer-main__logo-text" src="images/logo-text-footer.svg" width="128" height="24" alt="CAT ENERGY.">
       </a>
       <ul class="footer-main__social social">
         <li class="social__item">
@@ -241,9 +250,11 @@
           </a>
         </li>
       </ul>
-      <a class="footer-main__academy" href="#">
+      <a class="footer-main__academy" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
-        <img class="footer-main__academy-image" src="#" width="27" height="34" alt="HTML Academy.">
+        <svg class="footer-main__academy-image" width="27" height="34" aria-hidden="true" focusable="false">
+          <use href="images/icons/stack.svg#logo-htmlacademy"></use>
+        </svg>
       </a>
     </footer>
     <script src="scripts/index.js" defer></script>

@@ -2,13 +2,27 @@
   padding: 0;
   list-style: none;
 }
-// .social__item {
-// }
-// .social__link {
-// }
-// .social__link--vkontakte {
-// }
-// .social__link--youtube {
-// }
-// .social__link--telegram {
-// }
+
+.social__item {
+  width: 28px;
+  height: 22px;
+}
+
+.social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $spacial-grey;
+
+  &.social__link--vkontakte {
+    mask-image: url("../../images/icons/stack.svg#vkontakte");
+  }
+
+  &.social__link--youtube {
+    mask-image: url("../../images/icons/stack.svg#youtube");
+  }
+
+  &.social__link--telegram {
+    mask-image: url("../../images/icons/stack.svg#telegram");
+  }
+}
