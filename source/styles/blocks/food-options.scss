@@ -1,24 +1,45 @@
-// .food-options {
-// }
+.food-options {
+  padding: 20px;
+  max-width: 1280px;
+
+  @media #{$tablet-only} {
+    padding: 0 30px 45px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 82px 30px 71px;
+  }
+}
 
 .food-options__list {
-  padding: 0;
+  @include normilize-list;
   margin: 0;
-  list-style: none;
-  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media #{$tablet-only} {
+    gap: 30px;
+  }
+
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
 }
 
 .food-options__item {
-  background-color: $base-grey;
+  background-color: $base-bg-color;
   position: relative;
   padding-top: 30px;
-  margin-bottom: 20px;
+  width: 100%;
 
   &::before {
     content: "";
     width: 50px;
     height: 50px;
-    background-color: $base-green;
+    background-color: $special-bg-color;
     display: block;
     border-radius: 50%;
     position: absolute;
@@ -54,7 +75,7 @@
 
 .food-options__title {
   font-family: $special-font;
-  color: $base-black;
+  color: $base-font-color-black;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -68,7 +89,7 @@
 
 .food-options__link {
   font-family: $special-font;
-  color: $base-black;
+  color: $base-font-color-black;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;

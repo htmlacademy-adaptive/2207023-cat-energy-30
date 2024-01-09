@@ -1,25 +1,130 @@
 .hero-section {
-  background-color: $base-green;
+  background-repeat: no-repeat;
+  padding: 27px 20px 0;
+
+  @media #{$mobile-only} {
+    background-image: linear-gradient(to bottom, rgba($special-bg-color, 0.85) 302px, $base-bg-color-white 302px), url("../../images/index-background-mobile@1x.jpg");
+    background-size: auto 301px;
+    background-position: center top;
+
+    @media #{$retina} {
+      background-image: linear-gradient(to bottom, rgba($special-bg-color, 0.85) 302px, $base-bg-color-white 302px), url("../../images/index-background-mobile@2x.jpg");
+    }
+  }
+
+  @media #{$tablet-only} {
+    padding: 65px 30px 0;
+    position: relative;
+  }
+
+  @media #{$desktop-only} {
+    background-image: linear-gradient(to left, rgba($special-bg-color, 0.85) 50%, $base-bg-color-white 50%), url("../../images/index-background-desktop@1x.jpg");
+    background-size: cover;
+    background-position: center right;
+    padding: 114px 0 184px;
+
+    @media #{$retina} {
+      background-image: linear-gradient(to left, rgba($special-bg-color, 0.85) 50%, $base-bg-color-white 50%), url("../../images/index-background-desktop@2x.jpg");
+    }
+  }
+}
+
+.hero-section__content {
+  max-width: 1280px;
+
+  @media #{$desktop-only} {
+    margin: 110px auto 0;
+    padding: 0 30px 0;
+    position: relative;
+  }
 }
 
 .hero-section__title {
   font-family: $special-font;
-  color: $base-white;
+  color: $base-font-color-white;
   text-align: center;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0 auto 25px;
+  max-width: 280px;
+
+  @media #{$not-mobile} {
+    color: $base-font-color-black;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    max-width: 430px;
+    text-align: left;
+  }
+
+  @media #{$tablet-only} {
+    margin-left: 90px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 80px;
+    margin-top: 0;
+  }
 }
 
 .hero-section__description {
   font-family: $special-font;
-  color: $base-white;
+  color: $base-font-color-white;
   text-align: center;
   line-height: 14px;
+  margin-bottom: 29px;
+
+  @media #{$not-mobile} {
+    color: $base-font-color-black;
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 430px;
+    text-align: left;
+  }
+
+  @media #{$tablet-only} {
+    margin-left: 90px;
+    margin-bottom: 50px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 80px;
+    margin-bottom: 52px;
+  }
 }
 
-// .hero-section__button {
-// }
+.hero-section__image {
+  display: flex;
+  margin: 0 auto 3px;
 
-// .hero-section__image {
-// }
+  @media #{$not-mobile} {
+    position: absolute;
+  }
+
+  @media #{$tablet-only} {
+    bottom: -526px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  @media #{$desktop-only} {
+    top: -81px;
+    left: 447px;
+  }
+}
+
+.hero-section__button {
+  margin: 0 auto;
+
+  @media #{$tablet-only} {
+    margin-left: 90px;
+    margin-bottom: 526px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 80px;
+    margin-bottom: 0;
+  }
+}

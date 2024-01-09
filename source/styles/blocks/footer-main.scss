@@ -1,12 +1,31 @@
 .footer-main {
-  background-color: $base-grey;
+  background-color: $base-bg-color;
+}
+
+.footer-main__content {
+  max-width: 1280px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media #{$not-mobile} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 55px 30px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 66px 30px;
+  }
 }
 // .footer-main__logo {
 // }
 // .footer-main__logo-text {
 // }
 .footer-main__social {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .footer-main__academy {

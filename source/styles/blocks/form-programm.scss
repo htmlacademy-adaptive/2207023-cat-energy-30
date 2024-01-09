@@ -1,8 +1,11 @@
-// .form-programm {
-// }
+.form-programm {
+  @media #{$tablet-only} {
+    padding: 0 40px;
+  }
+}
 
 .form-programm__description {
-  color: $base-black;
+  color: $base-font-color-black;
   text-transform: uppercase;
   font-family: $special-font;
 }
@@ -10,12 +13,22 @@
 // .form-programm__form {
 // }
 
-// .form-programm__group {
-// }
+.form-programm__wrap {
+  @media #{$desktop-only} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
+.form-programm__group {
+  border: none;
+  padding: 0;
+}
 
 .form-programm__group-title {
   font-family: $special-font;
-  color: $base-black;
+  color: $base-font-color-black;
   text-transform: uppercase;
   font-size: 24px;
   line-height: 26px;
@@ -23,9 +36,8 @@
 }
 
 .form-programm__cat-list {
+  @include normilize-list;
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 // .form-programm__cat-item {
@@ -57,7 +69,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: $base-black;
+    background-color: $base-form-color;
     mask-image: url("../../images/icons/stack.svg#email");
     right: 13.5px;
   }
@@ -70,7 +82,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: $base-black;
+    background-color: $base-form-color;
     mask-image: url("../../images/icons/stack.svg#phone");
     right: 14.5px;
   }
@@ -88,7 +100,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    border: 1px solid $special-form-light-grey;
+    border: 1px solid $base-form-color-light;
     border-radius: 50%;
     margin-right: 15px;
     background-position: center center;
@@ -97,7 +109,7 @@
   }
 
   &.form-programm__input--radio:checked + .form-programm__label-text::before {
-    background-image: radial-gradient($base-green 6.5px, $base-white 6.5px);
+    background-image: radial-gradient($special-form-color 6.5px, $base-form-color-white 6.5px);
   }
 
   &.form-programm__input--checkbox + .form-programm__label-text::before {
@@ -105,7 +117,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    border: 1px solid $special-form-light-grey;
+    border: 1px solid $base-form-color-light;
     margin-right: 15px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -118,9 +130,8 @@
 }
 
 .form-programm__target-list {
+  @include normilize-list;
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 // .form-programm__target-item {
@@ -135,18 +146,29 @@
 // }
 
 .form-programm__owner-list {
+  @include normilize-list;
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 // .form-programm__owner-item {
 // }
 
 .form-programm__additionally-list {
+  @include normilize-list;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px 20px;
+
+  @media #{$tablet-only} {
+    grid-template-columns: repeat(auto-fill, minmax(297px, 1fr));
+    gap: 32px 30px;
+  }
+
+  @media #{$desktop-only} {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px 55px;
+  }
 }
 
 // .form-programm__additionally-item {
@@ -160,7 +182,7 @@
 
 .form-programm__footnote {
   line-height: 16px;
-  color: $base-black;
+  color: $base-font-color-black;
   text-align: center;
   display: block;
 }

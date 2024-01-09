@@ -1,10 +1,13 @@
-// .page {
-
-// }
+.page {
+  min-height: 100vh;
+}
 
 .page__body {
   font-family: $primiry-font;
   font-size: 14px;
   line-height: 18px;
   color: $base-font-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
