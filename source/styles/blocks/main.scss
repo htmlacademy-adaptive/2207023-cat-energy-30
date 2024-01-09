@@ -1,9 +1,47 @@
-// .main {
-// }
+.main {
+  flex-grow: 1;
+
+  @media #{$desktop-only} {
+    &.main--inner {
+      padding-top: 114px;
+    }
+  }
+}
+
 .main__title {
   font-family: $special-font;
-  color: $base-black;
+  color: $base-font-color-black;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  &.main__title--programm {
+    padding-left: 40px;
+  }
+}
+
+.main__hero-section {
+  margin: 0 auto;
+}
+
+.main__food-options {
+  margin: 0 auto;
+}
+
+.main__how-it-works {
+  margin: 0 auto;
+}
+
+.main__example {
+  margin: 0 auto;
+}
+
+.main__wrap {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 20px;
+
+  @media #{$not-mobile} {
+    padding: 0 30px;
+  }
 }

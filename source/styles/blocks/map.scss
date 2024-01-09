@@ -1,17 +1,64 @@
-// .map {
-// }
+.map {
+  min-height: 474px;
+  background-color: $dark-grey; // временно! Убрать, как будет карта.
+
+  @media #{$tablet-only} {
+    min-height: 600px;
+  }
+
+  @media #{$desktop-only} {
+    min-height: 400px;
+  }
+}
+
+.map__contact-wrap {
+  max-width: 1280px;
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 474px;
+
+  @media #{$tablet-only} {
+    min-height: 600px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 0 30px;
+    min-height: 400px;
+  }
+}
 
 .map__contact {
-  background-color: $base-grey;
+  background-color: $base-bg-color;
+  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: calc(50% - 10px) 50%;
+  gap: 10px;
 
   &.map__contact--index {
-    background-color: $base-white;
+    background-color: $base-bg-color-white;
+  }
+
+  @media #{$tablet-only} {
+    padding: 60px 40px;
+    grid-template-columns: 23% 23%;
+    gap: 54%;
+  }
+
+  @media #{$desktop-only} {
+    position: absolute;
+    top: 95px;
+    left: 30px;
+    width: 565px;
+    padding: 60px 78px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 87px;
   }
 }
 
 .map__invite {
   font-family: $special-font;
-  color: $base-dark-grey;
+  color: $special-font-color-darker;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;

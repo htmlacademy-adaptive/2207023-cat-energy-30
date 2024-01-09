@@ -1,9 +1,26 @@
 // .catalog {
 // }
 .catalog__list {
+  @include normilize-list;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 20px;
+
+  @media #{$tablet-only} {
+    grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
+    column-gap: 60px;
+  }
+
+  @media #{$desktop-only} {
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    column-gap: 80px;
+  }
 }
+
 // .catalog__product {
 // }

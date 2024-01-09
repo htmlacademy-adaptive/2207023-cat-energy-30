@@ -1,13 +1,64 @@
-$base-font-color: #444444;
+/* ---ПАЛИТРЫ ЦВЕТОВ--- */
 
-$base-black: #000000;
-$base-dark-grey: #111111;
-$special-dark-grey: #222222;
-$spacial-grey: #666666;
-$special-light-grey: #d3d3d3;
-$special-form-light-grey: #cdcdcd;
-$base-grey-bg: #eaeaea;
-$base-grey: #f2f2f2;
-$base-white: #ffffff;
+// МОНОХРОМНАЯ
+$black: #000000;
+$darkest-grey: #111111;
+$darker-grey: #222222;
+$dark-grey: #444444;
+$grey: #666666;
+$light-grey: #d3d3d3;
+$lighter-grey: #cdcdcd;
+$lighter-grey2: #e6e6e6;
+$lightest-grey: #eaeaea;
+$bright-grey: #f2f2f2;
+$white: #ffffff;
 
-$base-green: #68b738;
+// ЦВЕТНАЯ
+$green: #68b738;
+
+// ПРОЕКТНАЯ
+// ШРИФТЫ
+$base-font-color: $dark-grey;
+$base-font-color-black: $black;
+$base-font-color-white: $white;
+$special-font-color-dark: $darker-grey;
+$special-font-color-darker: $darkest-grey;
+
+// ФОНЫ
+$base-bg-color: $bright-grey;
+$base-bg-color-white: $white;
+$special-bg-color-light: $lightest-grey;
+$special-bg-color: $green;
+
+// КНОПКИ
+$base-button-color: $green;
+$special-button-color: $bright-grey;
+
+// СОЦИАЛЬНЫЕ СЕТИ
+$base-social-color: $grey;
+
+// ФОРМЫ
+$base-form-color: $black;
+$base-form-color-light: $lighter-grey;
+$base-form-color-white: $white;
+$special-form-color: $green;
+
+// ПРОЧЕЕ
+$special-grey: $light-grey;
+$special-menu-grey: $lighter-grey2;
+
+/* ---КОНТРЛЬНЫЕ ТОЧКИ И АДАПТИВНОСТЬ--- */
+
+// БРЕЙКПОИНТЫ
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
+$breakpoint-gap: 0.02px;
+
+// МЕДИА-ВЫРАЖЕНИЯ
+$mobile-only: "(max-width: #{$breakpoint-tablet - $breakpoint-gap})";
+$tablet-only: "(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+$desktop-only: "(min-width: #{$breakpoint-desktop})";
+$not-mobile: "(min-width: #{$breakpoint-tablet})";
+$not-desktop: "(max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+
+$retina: "(min-resolution: 2dppx)";

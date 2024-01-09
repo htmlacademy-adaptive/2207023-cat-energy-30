@@ -1,10 +1,32 @@
 .example {
-  background-color: $base-grey-bg;
+  background-color: $special-bg-color-light;
+
+  @media #{$tablet-only} {
+    background-image: linear-gradient(to bottom, $base-bg-color-white 574px, $special-bg-color-light 574px);
+  }
+
+  @media #{$desktop-only} {
+    background-image: linear-gradient(to bottom, $base-bg-color-white 136px, $special-bg-color-light 136px);
+  }
+}
+
+.example__content {
+  max-width: 1280px;
+  padding: 25px 20px 40px;
+  margin: 0 auto;
+
+  @media #{$tablet-only} {
+    padding: 0 30px 101px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 0 30px 75px;
+  }
 }
 
 .example__title {
   font-family: $special-font;
-  color: $base-black;
+  color: $base-font-color-black;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;

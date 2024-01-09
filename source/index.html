@@ -11,16 +11,18 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page__body">
-    <header class="header-main">
-      <a class="header-main__logo" href="index.html">
+    <header class="header-main header-main--nojs">
+      <a class="header-main__logo-link header-main__logo-link--current" href="index.html" aria-current="page">
         <picture>
           <source media="(min-width: 1280px)" type="image/svg+xml" srcset="images/logo-image-desktop.svg" width="70" height="59">
           <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-image-tablet.svg" width="60" height="50">
           <img class="header-main__logo-image" src="images/logo-image-mobile.svg" width="33" height="38" alt="Логотип магазина.">
         </picture>
+      </a>
+      <a class="header-main__logo-link header-main__logo-link--current" href="index.html" aria-current="page">
         <img class="header-main__logo-text" src="images/logo-text-header.svg" width="101" height="18" alt="CAT ENERGY.">
       </a>
-      <nav class="header-main__navigation navigation">
+      <nav class="header-main__navigation navigation navigation--nojs">
         <button class="navigation__toggle-button menu-btn" type="button">
           <span class="visually-hidden">
             Открыть меню.
@@ -55,23 +57,25 @@
         Магазин по подбору и продаже функционального и полезного питания для котов CAT ENERGY.
       </h1>
       <section class="main__hero-section hero-section">
-        <h2 class="hero-section__title">
-          Функциональное питание для котов
-        </h2>
-        <p class="hero-section__description">
-          Занялся собой? Займись котом!
-        </p>
-        <a class="hero-section__button button" href="form.html">
-          Подобрать программу
-        </a>
-        <picture>
-          <source media="(min-width: 1280px)" type="image/webp" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x" width="552" height="499">
-          <source media="(min-width: 768px)" type="image/webp" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x" width="709" height="609">
-          <source type="image/webp" srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x" width="280" height="270">
-          <source media="(min-width: 1280px)" type="image/png" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x" width="552" height="499">
-          <source media="(min-width: 768px)" type="image/png" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" width="709" height="609">
-          <img class="hero-section__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="CAT ENERGY PRO со вкуом курицы.">
-        </picture>
+        <div class="hero-section__content">
+          <h2 class="hero-section__title">
+            Функциональное питание для&nbsp;котов
+          </h2>
+          <p class="hero-section__description">
+            Занялся собой? Займись котом!
+          </p>
+          <picture>
+            <source media="(min-width: 1280px)" type="image/webp" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x" width="552" height="499">
+            <source media="(min-width: 768px)" type="image/webp" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x" width="709" height="609">
+            <source type="image/webp" srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x" width="280" height="270">
+            <source media="(min-width: 1280px)" type="image/png" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x" width="552" height="499">
+            <source media="(min-width: 768px)" type="image/png" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x" width="709" height="609">
+            <img class="hero-section__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="CAT ENERGY PRO со вкуом курицы.">
+          </picture>
+          <a class="hero-section__button button" href="form.html">
+            Подобрать программу
+          </a>
+        </div>
       </section>
       <section class="main__food-options food-options">
         <h2 class="visually-hidden">
@@ -122,61 +126,63 @@
         </ul>
       </section>
       <section class="main__example example">
-        <h2 class="example__title">
-          Живой пример
-        </h2>
-        <div class="example__content-wrap">
-          <p class="example__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <dl class="example__result-list result-list">
-            <div class="result-list__wrap">
-              <dt class="result-list__parameter">
-                снижение веса
-              </dt>
-              <dd class="result-list__value">
-                5 КГ
-              </dd>
+        <div class="example__content">
+          <h2 class="example__title">
+            Живой пример
+          </h2>
+          <div class="example__content-wrap">
+            <p class="example__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <dl class="example__result-list result-list">
+              <div class="result-list__wrap">
+                <dt class="result-list__parameter">
+                  снижение веса
+                </dt>
+                <dd class="result-list__value">
+                  5 КГ
+                </dd>
+              </div>
+              <div class="result-list__wrap">
+                <dt class="result-list__parameter">
+                  затрачено времени
+                </dt>
+                <dd class="result-list__value">
+                  60 ДНЕЙ
+                </dd>
+              </div>
+              <div class="result-list__wrap result-list__wrap--cost">
+                <dt class="result-list__parameter">
+                  Затраты на питание:
+                </dt>
+                <dd class="result-list__value">
+                  15 000 РУБ.
+                </dd>
+              </div>
+            </dl>
+            <div class="example__comparison-slider comparison-slider">
+              <picture>
+                <source media="(min-width: 1280px)" type="image/webp" srcset="images/cat-desktop-before@1x.webp 1x, images/cat-desktop-before@2x.webp 2x" width="560" height="512">
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/cat-tablet-before@1x.webp 1x, images/cat-tablet-before@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="images/cat-mobile-before@1x.webp 1x, images/cat-mobile-before@2x.webp 2x" width="280" height="256">
+                <source media="(min-width: 1280px)" type="image/png" srcset="images/cat-desktop-before@1x.png 1x, images/cat-desktop-before@2x.png 2x" width="560" height="512">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/cat-tablet-before@1x.png 1x, images/cat-tablet-before@2x.png 2x" width="560" height="512">
+                <img class="comparison-slider__image comparison-slider__image--before" src="images/cat-mobile-before@1x.png" srcset="images/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот &quot;до&quot;.">
+              </picture>
+              <picture>
+                <source media="(min-width: 1280px)" type="image/webp" srcset="images/cat-desktop-after@1x.webp 1x, images/cat-desktop-after@2x.webp 2x" width="560" height="512">
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/cat-tablet-after@1x.webp 1x, images/cat-tablet-after@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="images/cat-mobile-after@1x.webp 1x, images/cat-mobile-after@2x.webp 2x" width="280" height="256">
+                <source media="(min-width: 1280px)" type="image/png" srcset="images/cat-desktop-after@1x.png 1x, images/cat-desktop-after@2x.png 2x" width="560" height="512">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/cat-tablet-after@1x.png 1x, images/cat-tablet-after@2x.png 2x" width="560" height="512">
+                <img class="comparison-slider__image comparison-slider__image--after" src="images/cat-mobile-after@1x.png" srcset="images/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот &quot;после&quot;.">
+              </picture>
+              <button class="comparison-slider__toggle-button" type="button">
+                <span class="visually-hidden">
+                  Посмотреть результат.
+                </span>
+              </button>
             </div>
-            <div class="result-list__wrap">
-              <dt class="result-list__parameter">
-                затрачено времени
-              </dt>
-              <dd class="result-list__value">
-                60 ДНЕЙ
-              </dd>
-            </div>
-            <div class="result-list__wrap result-list__wrap--cost">
-              <dt class="result-list__parameter">
-                Затраты на питание:
-              </dt>
-              <dd class="result-list__value">
-                15 000 РУБ.
-              </dd>
-            </div>
-          </dl>
-          <div class="example__comparison-slider comparison-slider">
-            <picture>
-              <source media="(min-width: 1280px)" type="image/webp" srcset="images/cat-desktop-before@1x.webp 1x, images/cat-desktop-before@2x.webp 2x" width="560" height="512">
-              <source media="(min-width: 768px)" type="image/webp" srcset="images/cat-tablet-before@1x.webp 1x, images/cat-tablet-before@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="images/cat-mobile-before@1x.webp 1x, images/cat-mobile-before@2x.webp 2x" width="280" height="256">
-              <source media="(min-width: 1280px)" type="image/png" srcset="images/cat-desktop-before@1x.png 1x, images/cat-desktop-before@2x.png 2x" width="560" height="512">
-              <source media="(min-width: 768px)" type="image/png" srcset="images/cat-tablet-before@1x.png 1x, images/cat-tablet-before@2x.png 2x" width="560" height="512">
-              <img class="comparison-slider__image comparison-slider__image--before" src="images/cat-mobile-before@1x.png" srcset="images/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот &quot;до&quot;.">
-            </picture>
-            <picture>
-              <source media="(min-width: 1280px)" type="image/webp" srcset="images/cat-desktop-after@1x.webp 1x, images/cat-desktop-after@2x.webp 2x" width="560" height="512">
-              <source media="(min-width: 768px)" type="image/webp" srcset="images/cat-tablet-after@1x.webp 1x, images/cat-tablet-after@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="images/cat-mobile-after@1x.webp 1x, images/cat-mobile-after@2x.webp 2x" width="280" height="256">
-              <source media="(min-width: 1280px)" type="image/png" srcset="images/cat-desktop-after@1x.png 1x, images/cat-desktop-after@2x.png 2x" width="560" height="512">
-              <source media="(min-width: 768px)" type="image/png" srcset="images/cat-tablet-after@1x.png 1x, images/cat-tablet-after@2x.png 2x" width="560" height="512">
-              <img class="comparison-slider__image comparison-slider__image--after" src="images/cat-mobile-after@1x.png" srcset="images/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот &quot;после&quot;.">
-            </picture>
-            <button class="comparison-slider__toggle-button" type="button">
-              <span class="visually-hidden">
-                Посмотреть результат.
-              </span>
-            </button>
           </div>
         </div>
       </section>
@@ -184,54 +190,58 @@
         <h2 class="visually-hidden">
           Контакты
         </h2>
-        <div class="map__contact map__contact--index">
-          <p class="map__invite">
-            Приглашаем к сотрудничеству дилеров!
-          </p>
-          <address class="map__address">
-            <span class="map__address-city">
-              Санкт-Петербург
-            </span>
-            <span class="map__address-street">
-              ул. Большая Конюшенная, д. 19/8
-            </span>
-          </address>
+        <div class="map__contact-wrap">
+          <div class="map__contact map__contact--index">
+            <p class="map__invite">
+              Приглашаем к&nbsp;сотрудничеству дилеров!
+            </p>
+            <address class="map__address">
+              <span class="map__address-city">
+                Санкт-Петербург
+              </span>
+              <span class="map__address-street">
+                ул. Большая Конюшенная, д. 19/8
+              </span>
+            </address>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer-main">
-      <a class="footer-main__logo" href="#">
-        <img class="footer-main__logo-text" src="images/logo-text-footer.svg" width="128" height="24" alt="CAT ENERGY.">
-      </a>
-      <ul class="footer-main__social social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">
-              ВКонтакте.
-            </span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">
-              YouTube.
-            </span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">
-              Telegram.
-            </span>
-          </a>
-        </li>
-      </ul>
-      <a class="footer-main__academy" href="https://htmlacademy.ru/intensive/adaptive">
-        HTML Academy
-        <svg class="footer-main__academy-image" width="27" height="34" aria-hidden="true" focusable="false">
-          <use href="images/icons/stack.svg#logo-htmlacademy"></use>
-        </svg>
-      </a>
+      <div class="footer-main__content">
+        <a class="footer-main__logo" href="#">
+          <img class="footer-main__logo-text" src="images/logo-text-footer.svg" width="128" height="24" alt="CAT ENERGY.">
+        </a>
+        <ul class="footer-main__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">
+                ВКонтакте.
+              </span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">
+                YouTube.
+              </span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">
+                Telegram.
+              </span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer-main__academy" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg class="footer-main__academy-image" width="27" height="34" aria-hidden="true" focusable="false">
+            <use href="images/icons/stack.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
     </footer>
     <script src="scripts/index.js" defer></script>
   </body>

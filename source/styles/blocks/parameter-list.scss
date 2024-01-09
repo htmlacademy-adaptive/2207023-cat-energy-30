@@ -1,6 +1,5 @@
 .parameter-list {
-  padding: 0;
-  list-style: none;
+  @include normilize-list;
 }
 
 // .parameter-list__wrap {
