@@ -9,6 +9,8 @@ $grey: #666666;
 $light-grey: #d3d3d3;
 $lighter-grey: #cdcdcd;
 $lighter-grey2: #e6e6e6;
+$lighter-grey2-1: #e7e7e7;
+$lighter-grey3: #d9d9d9;
 $lightest-grey: #eaeaea;
 $bright-grey: #f2f2f2;
 $white: #ffffff;
@@ -23,6 +25,7 @@ $base-font-color-black: $black;
 $base-font-color-white: $white;
 $special-font-color-dark: $darker-grey;
 $special-font-color-darker: $darkest-grey;
+$special-font-color-light: $bright-grey;
 
 // ФОНЫ
 $base-bg-color: $bright-grey;
@@ -41,11 +44,16 @@ $base-social-color: $grey;
 $base-form-color: $black;
 $base-form-color-light: $lighter-grey;
 $base-form-color-white: $white;
+$base-form-border: $lighter-grey2-1;
 $special-form-color: $green;
 
 // ПРОЧЕЕ
 $special-grey: $light-grey;
+$special-border-grey: $lighter-grey;
 $special-menu-grey: $lighter-grey2;
+$special-border: $lighter-grey3;
+/* stylelint-disable-next-line function-no-unknown*/
+$catalog-border: lighten($special-border, 7.06%);
 
 /* ---КОНТРЛЬНЫЕ ТОЧКИ И АДАПТИВНОСТЬ--- */
 

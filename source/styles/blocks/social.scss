@@ -1,6 +1,19 @@
 .social {
   @include normilize-list;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 28px);
+  gap: 24px;
+  padding: 20px 74px;
+  border-bottom: 1px solid $special-border;
+  width: 100%;
+  justify-content: space-around;
+
+  @media #{$not-mobile} {
+    padding: 0;
+    border-bottom: none;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .social__item {

@@ -3,22 +3,20 @@
 .catalog__list {
   @include normilize-list;
   margin: 0;
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  column-gap: 20px;
+  border-top: 1px solid $catalog-border;
 
   @media #{$tablet-only} {
     grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
-    column-gap: 60px;
+    gap: 60px;
+    border: none;
   }
 
   @media #{$desktop-only} {
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
-    column-gap: 80px;
+    gap: 63px 80px;
+    border: none;
   }
 }
 
