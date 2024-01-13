@@ -32,7 +32,7 @@
 .food-options__item {
   background-color: $base-bg-color;
   position: relative;
-  padding-top: 30px;
+  padding: 30px 20px 19px;
   width: 100%;
 
   &::before {
@@ -71,6 +71,59 @@
     top: 35px;
     left: 12px;
   }
+
+  @media #{$tablet-only} {
+    padding: 77px 316px 53px 52px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: auto;
+      right: 63px;
+    }
+
+    &.food-options__item--slim::after {
+      width: 140px;
+      height: 194px;
+      top: 81px;
+      left: auto;
+      right: 93px;
+    }
+
+    &.food-options__item--pro::after {
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      left: auto;
+      right: 29px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    padding: 77px 52px 55px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+
+    &.food-options__item--slim::after {
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
+
+    &.food-options__item--pro::after {
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
+    }
+  }
 }
 
 .food-options__title {
@@ -81,11 +134,45 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 0;
-  margin-left: 90px;
+  margin-left: 70px;
+  margin-bottom: 29px;
+
+  @media #{$tablet-only} {
+    margin-left: 1px;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 162px;
+    margin-bottom: 73px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
-// .food-options__description {
-// }
+.food-options__description {
+  padding-right: 10px;
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid $special-border;
+
+  @media #{$tablet-only} {
+    margin-bottom: 48px;
+    color: $base-font-color-black;
+    border-bottom: none;
+    max-width: 650px;
+    padding-right: 0;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 23px;
+    color: $base-font-color-black;
+    border-bottom: none;
+    padding-right: 9px;
+  }
+}
 
 .food-options__link {
   font-family: $special-font;
@@ -95,6 +182,7 @@
   line-height: 16px;
   display: inline-flex;
   align-items: center;
+  min-height: 22px;
 
   &::after {
     content: "";
@@ -103,6 +191,13 @@
     height: 12px;
     margin-left: 15px;
     background-repeat: no-repeat;
-    background-position: left -10px center;
+    background-position: left -7px center;
+  }
+
+  @media #{$tablet-only} {
+    font-size: 20px;
+    line-height: 30px;
+
+    min-height: 38px;
   }
 }

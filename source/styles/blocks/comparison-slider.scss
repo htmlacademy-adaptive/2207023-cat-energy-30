@@ -1,10 +1,22 @@
-// .comparison-slider {
-// }
+.comparison-slider {
+  width: fit-content;
+
+  picture {
+    display: flex;
+  }
+}
 // .comparison-slider__image {
 // }
 // .comparison-slider__image--before {
 // }
-// .comparison-slider__image--after {
-// }
-// .comparison-slider__toggle-button {
-// }
+.comparison-slider__image--after {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.comparison-slider__toggle-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

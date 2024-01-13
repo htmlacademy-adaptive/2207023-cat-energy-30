@@ -2,18 +2,37 @@
   @include normilize-list;
 }
 
-// .parameter-list__wrap {
-// }
+.parameter-list__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$not-mobile} {
+    border-bottom: 1px solid $special-border-grey;
+    padding: 7px 0 4px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 6px 0 6px;
+  }
+}
 
 .parameter-list__parameter {
   font-size: 12px;
   line-height: 16px;
+
+  @media #{$not-mobile} {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .parameter-list__value {
   font-size: 12px;
   line-height: 16px;
-}
+  margin: 0;
 
-// .product__button {
-// }
+  @media #{$not-mobile} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

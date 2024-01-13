@@ -1,5 +1,35 @@
-// .related-products {
-// }
+.related-products {
+  padding-top: 25px;
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 2px;
+    top: 40px;
+    position: absolute;
+    background-color: $special-bg-color;
+    z-index: 1;
+    right: 50%;
+    width: 100vw;
+    transform: translateX(50%);
+  }
+
+  @media #{$tablet-only} {
+    padding-top: 69px;
+
+    &::after {
+      top: 90px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 76px;
+
+    &::after {
+      top: 98px;
+    }
+  }
+}
 
 .related-products__title {
   font-family: $special-font;
@@ -7,13 +37,38 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin: 0 0 36px;
+  padding: 0 20px;
+  background-color: $base-bg-color-white;
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+
+  @media #{$not-mobile} {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px;
+    margin-bottom: 80px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: -40px;
+  }
 }
 
 .related-products__content {
+  padding: 0 20px;
+
+  @media #{$tablet-only} {
+    padding: 0;
+  }
+
   @media #{$desktop-only} {
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 245px;
     column-gap: 80px;
+    margin-bottom: 87px;
   }
 }
 
@@ -24,16 +79,48 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   column-gap: 20px;
+  border-top: 1px solid $special-border-grey;
+  margin-bottom: 35px;
 
   @media #{$not-mobile} {
     display: flex;
     flex-direction: column;
     column-gap: 0;
+    border: none;
+    margin-bottom: 70px;
+  }
+
+  @media #{$desktop-only} {
+    border-top: 1px solid $special-border-grey;
+    margin: 0;
   }
 }
 
-// .related-products__item {
-// }
+.related-products__item {
+  padding: 12px 0 19px;
+  border-bottom: 1px solid $special-border-grey;
+
+
+  @media #{$not-mobile} {
+    display: grid;
+    grid-template-rows: auto 40px;
+    grid-template-columns: 60% auto;
+    row-gap: 25px;
+    border: 1px solid $special-border-grey;
+    padding: 26px 38px 27px;
+    margin-bottom: -1px;
+    align-items: center;
+  }
+
+  @media #{$desktop-only} {
+    border: none;
+    border-bottom: 1px solid $special-border-grey;
+    padding: 15px 1px 17px;
+    grid-template-columns: 305px 305px 244px;
+    gap: 20px;
+    grid-template-rows: auto;
+  }
+}
 
 .related-products__link {
   color: $special-font-color-dark;
@@ -44,23 +131,69 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  margin: 0 0 13px;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
 }
 
 .related-products__parameter-list {
   @include normilize-list;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$tablet-only} {
+    justify-self: end;
+  }
 }
 
 .related-products__parameter-count {
   line-height: 14px;
+  margin: 0;
+
+  @media #{$not-mobile} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media #{$desktop-only} {
+    margin-right: auto;
+  }
 }
 
 .related-products__parameter-price {
   line-height: 14px;
+  margin: 0;
+
+  @media #{$not-mobile} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media #{$tablet-only} {
+    min-width: 92px;
+    text-align: right;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 20px;
+    text-align: left;
+    justify-self: end;
+    min-width: 62px;
+  }
 }
 
-// .related-products__button {
-// }
+.related-products__button {
+  margin-top: 15px;
+
+  @media #{$not-mobile} {
+    margin: 0;
+  }
+}
 
 .related-products__action {
   background-repeat: no-repeat;
@@ -91,7 +224,6 @@
   @media #{$mobile-only} {
     background-image: linear-gradient(rgba($special-bg-color, 0.85), rgba($special-bg-color, 0.85)), url("../../images/action-mobile-bg@1x.jpg");
 
-
     @media #{$retina} {
       background-image: linear-gradient(rgba($special-bg-color, 0.85), rgba($special-bg-color, 0.85)), url("../../images/action-mobile-bg@2x.jpg");
     }
@@ -99,6 +231,18 @@
 
   @media #{$tablet-only} {
     background-image: linear-gradient(rgba($special-bg-color, 0.85), rgba($special-bg-color, 0.85)), url("../../images/action-tablet-bg@1x.jpg");
+    margin: 0 0 75px;
+    display: grid;
+    grid-template-columns: auto 165px;
+    padding: 61px 121px 61px 78px;
+    text-align: left;
+    align-items: center;
+
+    &::before {
+      position: static;
+      transform: none;
+    }
+
 
     @media #{$retina} {
       background-image: linear-gradient(rgba($special-bg-color, 0.85), rgba($special-bg-color, 0.85)), url("../../images/action-tablet-bg@2x.jpg");
@@ -107,6 +251,8 @@
 
   @media #{$desktop-only} {
     background-image: linear-gradient(rgba($special-bg-color, 0.85), rgba($special-bg-color, 0.85)), url("../../images/action-desktop-bg@1x.jpg");
+    margin: 0;
+    padding: 185px 42px 43px;
 
     @media #{$retina} {
       background-image: linear-gradient(rgba($special-bg-color, 0.85), rgba($special-bg-color, 0.85)), url("../../images/action-desktop-bg@2x.jpg");

@@ -16,11 +16,12 @@
   margin: 0 auto;
 
   @media #{$tablet-only} {
-    padding: 0 30px 101px;
+    padding: 0 30px;
   }
 
   @media #{$desktop-only} {
-    padding: 0 30px 75px;
+    padding: 0 30px;
+    position: relative;
   }
 }
 
@@ -30,12 +31,67 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  margin: 0 0 40px;
+
+  @media #{$not-mobile} {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media #{$tablet-only} {
+    margin-bottom: 60px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 76px;
+  }
 }
-// .example__content-wrap {
-// }
-// .example__description {
-// }
-// .example__result-list {
-// }
-// .example__comparison-slider {
-// }
+
+.example__content-wrap {
+  @media #{$tablet-only} {
+    padding-bottom: 101px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 70px 0 75px;
+    max-width: 440px;
+  }
+}
+
+.example__description {
+  margin-bottom: 20px;
+
+  @media #{$tablet-only} {
+    max-width: 900px;
+    margin: 0 auto 55px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 0 0 69px;
+  }
+}
+
+
+.example__result-list {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media #{$tablet-only} {
+    margin: 0 auto 104px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 0;
+  }
+}
+
+.example__comparison-slider {
+  position: relative;
+  margin: 0 auto;
+
+  @media #{$desktop-only} {
+    position: absolute;
+    top: 0;
+    left: 660px;
+  }
+}

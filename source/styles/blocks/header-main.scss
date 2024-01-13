@@ -11,6 +11,8 @@
   z-index: 2;
 
   @media #{$mobile-only} {
+    border-bottom: 1px solid $special-border;
+
     &.header-main--nojs {
       display: grid;
       grid-template-columns: 73px 1fr 73px;
@@ -32,7 +34,7 @@
   }
 
   @media #{$tablet-only} {
-    padding: 25px 34px 0 30px;
+    padding: 25px 31px 0 30px;
   }
 
   @media #{$desktop-only} {
@@ -70,9 +72,11 @@
 
 // }
 
-// .header-main__logo-text {
-
-// }
+.header-main__logo-text {
+  @media #{$desktop-only} {
+    width: 118px;
+  }
+}
 
 // .header-main__navigation {
 
