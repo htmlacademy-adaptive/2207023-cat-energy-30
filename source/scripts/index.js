@@ -1,18 +1,20 @@
 /* в этот файл добавляет скрипты*/
-const noJS = document.querySelectorAll('[class*="--nojs"]');
-for(let i = 0; i < noJS.length; i++) {
-  for(let j = 0; j < noJS[i].classList.length; j++) {
-    const classEl = noJS[i].classList[j].match(/--nojs/);//.input;
-    if(classEl !== null) {
-      noJS[i].classList.remove(String(classEl.input));
+document.addEventListener('DOMContentLoaded', () => {
+  const noJS = document.querySelectorAll('[class*="--nojs"]');
+  for(let i = 0; i < noJS.length; i++) {
+    for(let j = 0; j < noJS[i].classList.length; j++) {
+      const classEl = noJS[i].classList[j].match(/--nojs/);//.input;
+      if(classEl !== null) {
+        noJS[i].classList.remove(String(classEl.input));
+      }
     }
   }
-}
 
-const pageCurrents = document.querySelectorAll('[class*="--current"]');
-for(let i = 0; i < pageCurrents.length; i++) {
-  pageCurrents[i].setAttribute('tabindex', '-1');
-}
+  const pageCurrents = document.querySelectorAll('[class*="--current"]');
+  for(let i = 0; i < pageCurrents.length; i++) {
+    pageCurrents[i].setAttribute('tabindex', '-1');
+  }
+});
 
 const menuButtonToggle = document.querySelector('.menu-btn');
 const menuBlock = document.querySelector('.navigation__list');
@@ -58,6 +60,7 @@ const init = () => {
 
   myMap.geoObjects.add(myPlacemark);
 };
-
-ymaps.ready(init);
+window.addEventListener('load', () => {
+  ymaps.ready(init);
+});
 /* eslint-enable */

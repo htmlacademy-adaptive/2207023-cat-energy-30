@@ -1,22 +1,144 @@
 .comparison-slider {
-  width: fit-content;
+  width: 280px;
+  height: 256px;
 
   picture {
     display: flex;
   }
+
+  @media #{$not-mobile} {
+    width: 560px;
+    height: 512px;
+  }
 }
-// .comparison-slider__image {
-// }
-// .comparison-slider__image--before {
-// }
-.comparison-slider__image--after {
+
+.comparison-slider__before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+}
+
+.comparison-slider__image {
+  width: 280px;
+  height: 256px;
+  object-fit: cover;
+
+  &.comparison-slider__image--before {
+    object-position: left top;
+  }
+
+  &.comparison-slider__image--after {
+    object-position: right top;
+  }
+
+  @media #{$not-mobile} {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.comparison-slider__after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+}
+
+.comparison-slider__toggle-wrap {
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
+  z-index: 3;
+
+  width: 40px;
+  padding: 0;
 }
 
 .comparison-slider__toggle-button {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: $base-slider-bg;
+  border: 2px solid $base-slider-color;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+
+  transition: border-color 0.2s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: $base-slider-line;
+    mask-image: url("../../images/icons/stack.svg#slider-button");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    transform: translate(-50%, -50%);
+
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &:hover {
+    border-color: $state-color;
+
+    &::before {
+      background-color: $state-color;
+    }
+
+    & + .comparison-slider__toggle-line {
+      background-color: $state-color;
+    }
+  }
+
+  &:active {
+    border-color: rgba($state-color2, 0.6);
+
+    &::before {
+      background-color: rgba($state-color2, 0.6);
+    }
+
+    & + .comparison-slider__toggle-line {
+      background-color: rgba($state-color2, 0.6);
+    }
+  }
+}
+
+.comparison-slider__toggle-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: 0;
+
+  height: 100%;
+  width: 4px;
+
+  background-color: $base-slider-color;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease-in-out;
 }

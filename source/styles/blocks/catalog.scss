@@ -1,24 +1,24 @@
-// .catalog {
-// }
 .catalog__list {
   @include normilize-list;
-  margin: 0;
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  margin: 0;
+
   border-top: 1px solid $catalog-border;
 
   @media #{$tablet-only} {
     grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
     gap: 60px;
+
     border: none;
   }
 
   @media #{$desktop-only} {
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     gap: 63px 80px;
+
     border: none;
   }
 }
-
-// .catalog__product {
-// }

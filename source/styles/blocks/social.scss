@@ -1,18 +1,21 @@
 .social {
   @include normilize-list;
+
   display: grid;
   grid-template-columns: repeat(3, 28px);
   gap: 24px;
-  padding: 20px 74px;
-  border-bottom: 1px solid $special-border;
-  width: 100%;
   justify-content: space-around;
+  width: 100%;
+  padding: 20px 74px;
+
+  border-bottom: 1px solid $special-border;
 
   @media #{$not-mobile} {
-    padding: 0;
-    border-bottom: none;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    border-bottom: none;
   }
 }
 
@@ -25,7 +28,25 @@
   display: block;
   width: 100%;
   height: 100%;
+
   background-color: $base-social-color;
+
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $state-color;
+  }
+
+  &:focus {
+    background-color: $state-color;
+    outline: 2px solid $special-bg-color;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: $state-color;
+    opacity: 0.3;
+  }
 
   &.social__link--vkontakte {
     mask-image: url("../../images/icons/stack.svg#vkontakte");
