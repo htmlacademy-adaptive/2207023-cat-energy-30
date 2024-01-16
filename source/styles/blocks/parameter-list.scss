@@ -7,8 +7,9 @@
   justify-content: space-between;
 
   @media #{$not-mobile} {
-    border-bottom: 1px solid $special-border-grey;
     padding: 7px 0 4px;
+
+    border-bottom: 1px solid $special-border-grey;
   }
 
   @media #{$desktop-only} {
@@ -27,9 +28,10 @@
 }
 
 .parameter-list__value {
+  margin: 0;
+
   font-size: 12px;
   line-height: 16px;
-  margin: 0;
 
   @media #{$not-mobile} {
     font-size: 16px;

@@ -3,13 +3,15 @@
 }
 
 .page__body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: clip;
+
   font-family: $primiry-font;
   font-size: 14px;
   line-height: 18px;
   color: $base-font-color;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 
   @media #{$not-mobile} {
     font-size: 16px;

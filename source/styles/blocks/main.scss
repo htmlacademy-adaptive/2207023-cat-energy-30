@@ -9,8 +9,8 @@
 }
 
 .main__wrap {
-  margin: 0 auto;
   max-width: 1280px;
+  margin: 0 auto;
   padding: 27px 0 18px;
 
   @media #{$not-mobile} {
@@ -27,12 +27,13 @@
 }
 
 .main__title {
-  font-family: $special-font;
-  color: $base-font-color-black;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
   margin: 0 20px 41px;
+
+  font-family: $special-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $base-font-color-black;
 
   &.main__title--programm {
     margin-bottom: 37px;

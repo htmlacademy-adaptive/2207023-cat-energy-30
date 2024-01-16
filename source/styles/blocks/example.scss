@@ -12,26 +12,28 @@
 
 .example__content {
   max-width: 1280px;
-  padding: 25px 20px 40px;
   margin: 0 auto;
+  padding: 25px 20px 40px;
 
   @media #{$tablet-only} {
     padding: 0 30px;
   }
 
   @media #{$desktop-only} {
-    padding: 0 30px;
     position: relative;
+
+    padding: 0 30px;
   }
 }
 
 .example__title {
-  font-family: $special-font;
-  color: $base-font-color-black;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
   margin: 0 0 40px;
+
+  font-family: $special-font;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  color: $base-font-color-black;
 
   @media #{$not-mobile} {
     font-size: 60px;
@@ -53,8 +55,8 @@
   }
 
   @media #{$desktop-only} {
-    padding: 70px 0 75px;
     max-width: 440px;
+    padding: 70px 0 75px;
   }
 }
 
@@ -87,11 +89,12 @@
 
 .example__comparison-slider {
   position: relative;
+
   margin: 0 auto;
 
   @media #{$desktop-only} {
     position: absolute;
     top: 0;
-    left: 660px;
+    left: 690px;
   }
 }

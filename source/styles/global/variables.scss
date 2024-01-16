@@ -4,19 +4,25 @@
 $black: #000000;
 $darkest-grey: #111111;
 $darker-grey: #222222;
+$darker-grey2: #3e3e3e;
 $dark-grey: #444444;
 $grey: #666666;
+$grey-2: #6b6b6b;
 $light-grey: #d3d3d3;
+$light-grey-2: #bababa;
 $lighter-grey: #cdcdcd;
 $lighter-grey2: #e6e6e6;
 $lighter-grey2-1: #e7e7e7;
 $lighter-grey3: #d9d9d9;
 $lightest-grey: #eaeaea;
+$lightest-grey2: #ebebeb;
 $bright-grey: #f2f2f2;
 $white: #ffffff;
 
 // ЦВЕТНАЯ
 $green: #68b738;
+$green-2: #5eaa2f;
+$red: #ff8282;
 
 // ПРОЕКТНАЯ
 // ШРИФТЫ
@@ -36,9 +42,16 @@ $special-bg-color: $green;
 // КНОПКИ
 $base-button-color: $green;
 $special-button-color: $bright-grey;
+$state-button-color: $green-2;
+$state-button-spacial: $lightest-grey2;
 
 // СОЦИАЛЬНЫЕ СЕТИ
 $base-social-color: $grey;
+
+// ЛОГИТИП
+$base-color: $darkest-grey;
+$state-hover: $darker-grey2;
+$state-active: $grey-2;
 
 // ФОРМЫ
 $base-form-color: $black;
@@ -46,6 +59,19 @@ $base-form-color-light: $lighter-grey;
 $base-form-color-white: $white;
 $base-form-border: $lighter-grey2-1;
 $special-form-color: $green;
+$state-special-border: $light-grey-2;
+$state-border-hover: $lighter-grey;
+$state-border-focus: $dark-grey;
+$state-error: $red;
+
+// СЛАЙДЕР ДО/ПОСЛЕ
+$base-slider-color: $grey;
+$base-slider-bg: $white;
+$base-slider-line: $grey;
+
+// СОСТОЯНИЯ
+$state-color: $green;
+$state-color2: $green-2;
 
 // ПРОЧЕЕ
 $special-grey: $light-grey;

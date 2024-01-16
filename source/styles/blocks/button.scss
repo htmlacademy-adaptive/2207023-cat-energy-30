@@ -1,40 +1,69 @@
 .button {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: $base-button-color;
-  color: $base-font-color-white;
+  align-items: center;
   width: 100%;
-  height: 40px;
+  min-height: 40px;
+  padding: 10px;
+
   font-family: $special-font;
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
+  color: $base-font-color-white;
   text-transform: uppercase;
+  text-align: center;
+
+  background-color: $base-button-color;
   border: none;
   cursor: pointer;
 
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $state-button-color;
+  }
+
+  &:focus-visible {
+    outline-color: $base-font-color;
+  }
+
+  &:active {
+    color: rgba($base-font-color-white, 0.3);
+
+    background-color: $state-button-color;
+  }
 
   &.button--card {
     grid-column: 1 / -1;
   }
 
   &.button--more {
+    color: $base-font-color;
+
     background-color: $special-button-color;
-    color: $special-font-color-darker;
+
+    &:hover {
+      background-color: $state-button-spacial;
+    }
+
+    &:active {
+      background-color: $state-button-spacial;
+    }
   }
-  // &.button--related {
-  // }
 
   @media #{$not-mobile} {
     width: 244px;
-    height: 54px;
+    min-height: 54px;
+
     font-size: 20px;
     line-height: 26px;
 
     &.button--card {
       width: 100%;
-      height: 40px;
+      min-height: 40px;
+
       font-size: 16px;
       line-height: 20px;
     }

@@ -3,11 +3,12 @@
 }
 
 .footer-main__content {
-  max-width: 1280px;
-  padding: 20px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 20px 20px;
 
   @media #{$not-mobile} {
     display: grid;
@@ -25,39 +26,92 @@
   display: inline-flex;
   justify-content: center;
   padding: 20px 0;
+
   border-bottom: 1px solid $special-border;
+
+  &:hover {
+    .footer-main__logo-text {
+      fill: $state-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $special-bg-color;
+    outline-offset: 2px;
+    opacity: 0.8;
+  }
+
+  &:active {
+    .footer-main__logo-text {
+      fill: $state-active;
+    }
+  }
 
   &.footer-main__logo--current {
     pointer-events: none;
   }
 
   @media #{$not-mobile} {
-    padding: 0;
-    border-bottom: none;
     justify-self: start;
+    padding: 0;
+
+    border-bottom: none;
   }
 }
-// .footer-main__logo-text {
-// }
+
+.footer-main__logo-text {
+  fill: $base-color;
+}
+
 .footer-main__social {
   margin: 0 auto;
 }
 
 .footer-main__academy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+
   font-size: 16px;
   line-height: 20px;
   color: inherit;
-  display: inline-flex;
-  align-items: center;
-  padding: 20px 0;
-  justify-content: space-between;
+
+  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+  use {
+    fill: $base-font-color;
+
+    transition: fill 0.2s ease-in-out;
+  }
+
+  &:hover {
+    color: $state-color;
+
+    use {
+      fill: $state-color;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $special-bg-color;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    color: $base-font-color;
+
+    opacity: 0.3;
+
+    use {
+      fill: $state-color;
+    }
+  }
 
   @media #{$not-mobile} {
-    padding: 0;
-    width: 163px;
     justify-self: end;
+    width: 163px;
+    padding: 0;
   }
 }
-
-// .footer-main__academy-image {
-// }
