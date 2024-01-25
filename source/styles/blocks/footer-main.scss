@@ -51,6 +51,10 @@
     pointer-events: none;
   }
 
+  @media #{$mobile-only} {
+    width: 100%;
+  }
+
   @media #{$not-mobile} {
     justify-self: start;
     padding: 0;
